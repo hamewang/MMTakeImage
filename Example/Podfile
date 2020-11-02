@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'MMTakeImage_Example' do
+  pod 'MMTakeImage', :path => '../'
+
+  target 'MMTakeImage_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

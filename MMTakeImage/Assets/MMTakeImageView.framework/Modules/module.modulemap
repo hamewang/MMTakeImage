@@ -1,0 +1,6 @@
+framework module MMTakeImageView {
+  umbrella header "MMTakeImageView.h"
+
+  export *
+  module * { export * }
+}
