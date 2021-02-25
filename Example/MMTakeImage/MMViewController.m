@@ -46,35 +46,38 @@
     [compBtn addTarget:self action:@selector(compBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:compBtn];
     compBtn.frame = CGRectMake(300, 100, 100, 100);
+    self.cid = 1089875;
     
 }
 - (void)takeBtnClick:(UIButton *)btn {
+  
+    
     MMTakeViewController *vc = [[MMTakeViewController alloc] init];
     
     MMInputCameraModel *model = [[MMInputCameraModel alloc] init];
     model.mid = 5332;
-//    model.cname = @"wbx";
-    model.cid = 827767;
+//    model.cname = @"wbx11111";
+    model.cid = self.cid;
     model.spread = @"xxxxx";
-    model.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDQyNDEwMDIsImp0aSI6IjUzMzIifQ.Dq7JRd-558SnR88Pqnph7aiDZno3jEIguHBbEHTH-PM";
+    model.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ0Njg1MTksImp0aSI6IjUzMzIifQ.NsalasBCyct5rxVFG2C67EDgZOw3NrQLtgakEuaKdwc";
     vc.inputModel = model;
     __weak __typeof__(self) weakSelf = self;
     vc.takeBlock = ^(BOOL takeStatus, NSDictionary * _Nonnull outputDict) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         strongSelf.cid = [outputDict[@"cid"] intValue];
         strongSelf.cgid = [outputDict[@"cgid"] intValue];
-        NSLog(@"%@",outputDict);
     };
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)compBtnClick:(UIButton *)btn {
+
     MMCompViewController *vc = [[MMCompViewController alloc] init];
     MMInputContrastModel *inputModel = [[MMInputContrastModel alloc] init];
     inputModel.mid = 5332;
-    inputModel.cid =  827767;self.cid;
-    inputModel.cgid = 1326201;self.cgid;
+    inputModel.cid = self.cid;
+    inputModel.cgid = self.cgid;
     inputModel.spread = @"xxxxx";
-    inputModel.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDQyNDEwMDIsImp0aSI6IjUzMzIifQ.Dq7JRd-558SnR88Pqnph7aiDZno3jEIguHBbEHTH-PM";
+    inputModel.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ0Njg1MTksImp0aSI6IjUzMzIifQ.NsalasBCyct5rxVFG2C67EDgZOw3NrQLtgakEuaKdwc";
     vc.inputModel = inputModel;
     [self.navigationController pushViewController:vc animated:YES];
 }
