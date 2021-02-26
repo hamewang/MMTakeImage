@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		39A93AF1254C053B002BA63D /* MMCompViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A93AF0254C053B002BA63D /* MMCompViewController.m */; };
 		39A93AF6254C05C6002BA63D /* MMTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A93AF4254C05C6002BA63D /* MMTakeViewController.m */; };
-		4A7C547DBC50214398CE7621 /* Pods_MMTakeImage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20FF27AAE9D294C5580230D /* Pods_MMTakeImage_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -40,12 +39,10 @@
 
 /* Begin PBXFileReference section */
 		009FF0B9F9B465CB2B6DD709 /* Pods_MMTakeImage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMTakeImage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C6403DFBDD66C739510CD54 /* Pods-MMTakeImage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTakeImage_Tests.release.xcconfig"; path = "Target Support Files/Pods-MMTakeImage_Tests/Pods-MMTakeImage_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		39A93AEF254C053B002BA63D /* MMCompViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCompViewController.h; sourceTree = "<group>"; };
 		39A93AF0254C053B002BA63D /* MMCompViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCompViewController.m; sourceTree = "<group>"; };
 		39A93AF4254C05C6002BA63D /* MMTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTakeViewController.m; sourceTree = "<group>"; };
 		39A93AF5254C05C6002BA63D /* MMTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTakeViewController.h; sourceTree = "<group>"; };
-		4FF62465FC228C418CF677D6 /* Pods-MMTakeImage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTakeImage_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MMTakeImage_Tests/Pods-MMTakeImage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		52EBD255639FF0EE80FAA391 /* Pods-MMTakeImage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTakeImage_Example.debug.xcconfig"; path = "Target Support Files/Pods-MMTakeImage_Example/Pods-MMTakeImage_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MMTakeImage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMTakeImage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,7 +68,6 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2525FDCC4234A65CA2574EC /* Pods-MMTakeImage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTakeImage_Example.release.xcconfig"; path = "Target Support Files/Pods-MMTakeImage_Example/Pods-MMTakeImage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D6A5F89DB16951861682DE0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E20FF27AAE9D294C5580230D /* Pods_MMTakeImage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMTakeImage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDB56F45BD32DBE205E0ADF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +90,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				4A7C547DBC50214398CE7621 /* Pods_MMTakeImage_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +125,6 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				009FF0B9F9B465CB2B6DD709 /* Pods_MMTakeImage_Example.framework */,
-				E20FF27AAE9D294C5580230D /* Pods_MMTakeImage_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,8 +194,6 @@
 			children = (
 				52EBD255639FF0EE80FAA391 /* Pods-MMTakeImage_Example.debug.xcconfig */,
 				C2525FDCC4234A65CA2574EC /* Pods-MMTakeImage_Example.release.xcconfig */,
-				4FF62465FC228C418CF677D6 /* Pods-MMTakeImage_Tests.debug.xcconfig */,
-				2C6403DFBDD66C739510CD54 /* Pods-MMTakeImage_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -217,8 +209,8 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				CF6CAEB0F9F2BA6F39071389 /* [CP] Embed Pods Frameworks */,
-				F3D4565DB4E9ECD1167D1055 /* [CP] Copy Pods Resources */,
+				7C25A05A4EE94F720F514664 /* [CP] Embed Pods Frameworks */,
+				D4DE4AB95B073E23903760E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,7 +225,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "MMTakeImage_Tests" */;
 			buildPhases = (
-				D7B8C526A53BBF2C4A2D4905 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
@@ -331,7 +322,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF6CAEB0F9F2BA6F39071389 /* [CP] Embed Pods Frameworks */ = {
+		7C25A05A4EE94F720F514664 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,36 +350,14 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMTakeImage_Example/Pods-MMTakeImage_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D7B8C526A53BBF2C4A2D4905 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MMTakeImage_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F3D4565DB4E9ECD1167D1055 /* [CP] Copy Pods Resources */ = {
+		D4DE4AB95B073E23903760E1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MMTakeImage_Example/Pods-MMTakeImage_Example-resources.sh",
-				"${PODS_ROOT}/../../MMTakeImage/Assets/MMTakeImageBundle.bundle",
+				"${PODS_ROOT}/MMTakeImage/MMTakeImage/Assets/MMTakeImageBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -579,7 +548,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF62465FC228C418CF677D6 /* Pods-MMTakeImage_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -604,7 +572,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C6403DFBDD66C739510CD54 /* Pods-MMTakeImage_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

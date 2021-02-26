@@ -5,7 +5,7 @@ PODS:
   - FMDB/standard (2.7.5)
   - GPUImage (0.1.7)
   - Masonry (1.1.0)
-  - MMTakeImage (0.1.2):
+  - MMTakeImage (2.0.0):
     - AliyunOSSiOS
     - FMDB
     - GPUImage
@@ -14,13 +14,13 @@ PODS:
     - SDWebImage
     - SVProgressHUD
   - OpenCV (4.1.0)
-  - SDWebImage (5.9.3):
-    - SDWebImage/Core (= 5.9.3)
-  - SDWebImage/Core (5.9.3)
+  - SDWebImage (5.9.5):
+    - SDWebImage/Core (= 5.9.5)
+  - SDWebImage/Core (5.9.5)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - MMTakeImage (from `../`)
+  - MMTakeImage (from `https://github.com/hamewang/MMTakeImage.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
@@ -34,18 +34,24 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   MMTakeImage:
-    :path: "../"
+    :branch: master
+    :git: https://github.com/hamewang/MMTakeImage.git
+
+CHECKOUT OPTIONS:
+  MMTakeImage:
+    :commit: e98aad770de891a4a57805c0ed88c739afabd052
+    :git: https://github.com/hamewang/MMTakeImage.git
 
 SPEC CHECKSUMS:
   AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MMTakeImage: 7884e64f8852b0fbf7811058dd9946e506bcf101
+  MMTakeImage: 06cdcafbdbc542a7cc438d9b59fc8ce71412eb09
   OpenCV: 52cd4d72ff29e2be83421477aec5447320b7fb19
-  SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
+  SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 628e52643c88fbdfac42f39a18f034074c648ab8
+PODFILE CHECKSUM: 0a1cf48164ecdda3df998633a23725f598801bcb
 
 COCOAPODS: 1.10.0
