@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMTakeImage'
-  s.version          = '2.0.0'
+  s.version          = '2.1.0'
   s.summary          = 'moreme take image'
 
 # This description is used to generate tags and improve search results.
@@ -48,5 +48,6 @@ moreme sdk take image  ,get mid ,cid ,cgid
    s.dependency 'SVProgressHUD'
    s.dependency 'SDWebImage'
    s.dependency 'Masonry'
+   s.dependency 'SocketRocket'
   
 end

@@ -21,11 +21,12 @@ pod 'MMTakeImage', :git => 'https://github.com/hamewang/MMTakeImage.git',:branch
 ```
 ## Usage
 
+环境初始化
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-// 环境初始化
+// 
     [MMTakeImageView initializationSDK];
     return YES;
 }
@@ -34,19 +35,29 @@ pod 'MMTakeImage', :git => 'https://github.com/hamewang/MMTakeImage.git',:branch
 ```objective-c
 #import <MMTakeImageView/MMTakeImageView.h>
 
-/// 拍照
-        MMInputCameraModel *inputModel = [MMInputCameraModel new];
-         inputModel.mid = 5332; 
-//    inputModel.cid = 782813;
-         inputModel.cname =@"wb";
-         inputModel.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI3NzQ4OTcsImp0aSI6IjUzMzIifQ.SLq9_fkBESmgKSRLuN2FdjH7mtpeoEHZYXtby1MXXTA";
-         inputModel.spread = @"xxxx";
-/// 拍照条件 1.inputModel 比填, 2.必须人脸,3.蓝牙必须连上moreme硬件,4.定位必须打开
-        MMTakeImageView *takeImageView = [[MMTakeImageView alloc] initWithFrame:self.view.bounds InputModel:inputModel];
-        takeImageView.takeBlock = ^(BOOL takeStatus, NSDictionary * _Nonnull outputDict) {
-            NSLog(@"%d %@",takeStatus, outputDict);
-        };
-        [self.view addSubview:takeImageView];
+       MMInputCameraModel *model = [[MMInputCameraModel alloc] init];
+        model.mid = 5332;
+//        model.cname = @"wbx111111";
+        model.cid = self.cid; //必填。 第一次cid 没有时，根据cname创建返回。
+        model.spread = @"xxxxx";
+        model.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTYwOTcxODcsImp0aSI6IjUzMzIifQ.hw3B0ooz8A55925hDY9iDaMwGtrgiI85izL-Fl5n5x8";
+    
+    
+    MMTakeImageView *tView = [[MMTakeImageView alloc ]initWithFrame:self.view.bounds InputModel:model];
+    // 创建顾客案例组 状态返回
+    __weak __typeof__(self) weakSelf = self;
+    tView.takeBlock = ^(BOOL takeStatus, NSDictionary * _Nonnull outputDict) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        strongSelf.cid = [outputDict[@"cid"] intValue];
+        strongSelf.cgid = [outputDict[@"cgid"] intValue];
+        NSLog(@"xxx %d %@",takeStatus,outputDict);
+    };
+    /// 拍照 状态返回
+    tView.takeImageBlock = ^(BOOL takeImageStatus) {
+        NSLog(@"%d", takeImageStatus);
+    };
+
+
 ```
 大图对比
 ```objective-c

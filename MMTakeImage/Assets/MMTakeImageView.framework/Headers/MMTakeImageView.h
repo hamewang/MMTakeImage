@@ -18,8 +18,10 @@ extern NSString *const kNotification_PrepareAIReport;
 @interface MMTakeImageView : UIView
 ///必填
 @property(nonatomic, strong)MMInputCameraModel *inputModel;
-/// 拍照回调takeStatus:YES 开始拍照,NO 结束拍照 .outputDict: cid:为顾客ID , cgid:顾客案例组ID.
+/// 拍照到创建总个流程回调，takeStatus:YES 开始拍照,NO 结束拍照 .outputDict: cid:为顾客ID , cgid:顾客案例组ID.
 @property(nonatomic, copy)void(^takeBlock)(BOOL takeStatus, NSDictionary *outputDict);
+/// 单独拍照回掉
+@property(nonatomic, copy)void(^takeImageBlock)(BOOL takeImageStatus);
 /// 拍照存储的数组
 @property(nonatomic, strong)NSMutableArray *outputImageArray;
 /// appdelegate 调用此方法初始化SDK

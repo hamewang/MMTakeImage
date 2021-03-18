@@ -14,6 +14,7 @@
 
 #import <MMTakeImageView/MMInputCameraModel.h>
 #import <MMTakeImageView/MMInputContrastModel.h>
+#import <MMTakeImageView/MMTakeImageView.h>
 
 
 
@@ -50,25 +51,39 @@
     
 }
 - (void)takeBtnClick:(UIButton *)btn {
-  
+        MMInputCameraModel *model = [[MMInputCameraModel alloc] init];
+        model.mid = 5332;
+//        model.cname = @"wbx111111";
+        model.cid = self.cid;
+        model.spread = @"xxxxx";
+        model.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTYwOTcxODcsImp0aSI6IjUzMzIifQ.hw3B0ooz8A55925hDY9iDaMwGtrgiI85izL-Fl5n5x8";
     
-    MMTakeViewController *vc = [[MMTakeViewController alloc] init];
     
-    MMInputCameraModel *model = [[MMInputCameraModel alloc] init];
-    model.mid = 5332;
-//    model.cname = @"wbx11111";
-    model.cid = self.cid;
-    model.spread = @"xxxxx";
-    model.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ0Njg1MTksImp0aSI6IjUzMzIifQ.NsalasBCyct5rxVFG2C67EDgZOw3NrQLtgakEuaKdwc";
-    vc.inputModel = model;
+    MMTakeImageView *tView = [[MMTakeImageView alloc ]initWithFrame:self.view.bounds InputModel:model];
+    //
     __weak __typeof__(self) weakSelf = self;
-    vc.takeBlock = ^(BOOL takeStatus, NSDictionary * _Nonnull outputDict) {
+    tView.takeBlock = ^(BOOL takeStatus, NSDictionary * _Nonnull outputDict) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         strongSelf.cid = [outputDict[@"cid"] intValue];
         strongSelf.cgid = [outputDict[@"cgid"] intValue];
+        NSLog(@"xxx %d %@",takeStatus,outputDict);
     };
-    [self.navigationController pushViewController:vc animated:YES];
+    tView.takeImageBlock = ^(BOOL takeImageStatus) {
+        NSLog(@"%d", takeImageStatus);
+    };
+    [[UIApplication sharedApplication].keyWindow addSubview:tView];
+    
+    UIButton *dBtn =  [[UIButton alloc] init];
+    dBtn.frame = CGRectMake(100, 100, 100, 100);
+    dBtn.backgroundColor = [UIColor redColor];
+    [dBtn addTarget:self action:@selector(dBtnCLick:) forControlEvents:UIControlEventTouchUpInside];
+    [tView addSubview:dBtn];
 }
+
+- (void)dBtnCLick:(UIButton *)btn {
+    [btn.superview removeFromSuperview];
+}
+
 - (void)compBtnClick:(UIButton *)btn {
 
     MMCompViewController *vc = [[MMCompViewController alloc] init];
@@ -77,7 +92,7 @@
     inputModel.cid = self.cid;
     inputModel.cgid = self.cgid;
     inputModel.spread = @"xxxxx";
-    inputModel.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ0Njg1MTksImp0aSI6IjUzMzIifQ.NsalasBCyct5rxVFG2C67EDgZOw3NrQLtgakEuaKdwc";
+    inputModel.token = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTYwOTcxODcsImp0aSI6IjUzMzIifQ.hw3B0ooz8A55925hDY9iDaMwGtrgiI85izL-Fl5n5x8";
     vc.inputModel = inputModel;
     [self.navigationController pushViewController:vc animated:YES];
 }
