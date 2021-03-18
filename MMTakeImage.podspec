@@ -30,7 +30,7 @@ moreme sdk take image  ,get mid ,cid ,cgid
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MMTakeImage/Classes/**/*'
+#  s.source_files = 'MMTakeImage/Classes/**/*'
 
   s.resources = 'MMTakeImage/Assets/*.bundle'
   s.vendored_frameworks = 'MMTakeImage/Assets/*.framework'
